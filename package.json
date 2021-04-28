@@ -1,13 +1,13 @@
 {
-  "name": "EthereumExplorerV2",
+  "name": "QuasarExplorerV2",
   "private": false,
   "version": "0.1.0",
-  "description": "A lightweight ethereum block explorer",
+  "description": "A lightweight Quasar block explorer",
   "repository": "https://github.com/carsenk/explorer",
   "license": "GPL-3.0",
   "devDependencies": {
     "bower": "^1.3.1",
-    "http-server": "^0.6.1",
+    "http-server": "^0.12.3",
     "jasmine-core": "^2.3.4",
     "karma": "~0.12",
     "karma-chrome-launcher": "^0.1.12",
