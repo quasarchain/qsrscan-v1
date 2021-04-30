@@ -45,7 +45,7 @@ angular.module('ethExplorer')
 	                        newDate.setTime(blockNewest.timestamp*1000);
 	                        $scope.time = newDate.toUTCString();
 
-	                        $scope.secondsSinceBlock1 = blockNewest.timestamp - 1438226773;
+	                        $scope.secondsSinceBlock1 = blockNewest.timestamp - 1618920588;
 	                        $scope.daysSinceBlock1 = ($scope.secondsSinceBlock1 / 86400).toFixed(2);
 
 	                        // Average Block Times:
@@ -103,8 +103,8 @@ angular.module('ethExplorer')
 	                $scope.versionCurrency = web3.version.ethereum; // TODO: change that to currencyname?
 
 	                // ready for the future:
-	                try { $scope.versionWhisper = web3.version.whisper; }
-	                catch(err) {$scope.versionWhisper = err.message; }
+	            //    try { $scope.versionWhisper = web3.version.whisper; }
+	             //   catch(err) {$scope.versionWhisper = err.message; }
 
                 });
 

@@ -39,8 +39,8 @@ angular.module('ethExplorer')
                     $scope.gasLimit = result.gasLimit;
                     $scope.gasUsed = result.gasUsed;
                     $scope.nonce = result.nonce;
-                    var diff = ("" + result.difficulty).replace(/['"]+/g, '') / 1000000000000;
-                    $scope.difficulty = diff.toFixed(3) + " T";
+                    var diff = ("" + result.difficulty).replace(/['"]+/g, '') / 1000;
+                    $scope.difficulty = diff.toFixed(4) + " K";
                     $scope.gasLimit = new BigNumber(result.gasLimit).toFormat(0) + " m/s"; // that's a string
                     $scope.gasUsed = new BigNumber(result.gasUsed).toFormat(0) + " m/s";
                     $scope.nonce = result.nonce;
@@ -117,7 +117,7 @@ angular.module('ethExplorer')
                             to: receipt.to,
                             gas: receipt.gasUsed,
                             input: result.input.slice(2),
-                            value: web3.fromWei(result.value, "ether"),
+                            value: web3.fromWei(result.value, "QSR"),
                             contractAddress: receipt.contractAddress
                         }
                         $scope.$apply(

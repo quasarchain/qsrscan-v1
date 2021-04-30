@@ -109,7 +109,7 @@ angular.module('ethExplorer')
                   newDate.setTime(blockNewest.timestamp*1000);
                   $scope.time = newDate.toUTCString();
 
-                  $scope.secondsSinceBlock1 = blockNewest.timestamp - 1438226773;
+                  $scope.secondsSinceBlock1 = blockNewest.timestamp - 1618920588;
                   $scope.daysSinceBlock1 = ($scope.secondsSinceBlock1 / 86400).toFixed(2);
 
                   // Average Block Times:
@@ -164,8 +164,8 @@ angular.module('ethExplorer')
           $scope.versionCurrency = web3.version.ethereum; // TODO: change that to currencyname?
 
           // ready for the future:
-          try { $scope.versionWhisper = web3.version.whisper; }
-          catch(err) {$scope.versionWhisper = err.message; }
+      //    try { $scope.versionWhisper = web3.version.whisper; }
+      //    catch(err) {$scope.versionWhisper = err.message; }
 }
 
 
@@ -233,8 +233,8 @@ angular.module('filters', []).
   filter('diffFormat', function () {
     return function (diffi) {
       if (isNaN(diffi)) return diffi;
-      var n = diffi / 1000000000000;
-      return n.toFixed(3) + " T";
+      var n = diffi / 1000;
+      return n.toFixed(6) + " K";
     };
   }).
   filter('stylize', function () {
@@ -254,8 +254,8 @@ angular.module('filters', []).
   filter('hashFormat', function () {
     return function (hashr) {
       if (isNaN(hashr)) return hashr;
-      var n = hashr / 1000000000000;
-      return n.toFixed(3) + " TH/s";
+      var n = hashr / 1000;
+      return n.toFixed(6) + " KH/s";
     };
   }).
   filter('gasFormat', function () {

@@ -1,14 +1,4 @@
-// preliminary code! TDD - still needs refactoring & optimization
-//
-//
-// chainInfoController.js
-//
-// contains 1 controller:
-//    addressInfosCtrl
-//
-// by AltSheets
-//    September 2015
-//
+
 
 angular.module('ethExplorer')
     .controller('addressInfosCtrl', function ($rootScope, $scope, $location, $routeParams,$q) {
@@ -84,44 +74,6 @@ angular.module('ethExplorer')
             // TODO: not working yet:
             function getTransactions(){
                 var deferred = $q.defer();
-
-                /*
-
-                // See https://github.com/ethereum/go-ethereum/issues/1897#issuecomment-166351797
-                // plus the following posts
-                // Giving up for now. Invested another 3 hours without results. Grrrr..
-
-                // var options="address:"+$scope.addressId;
-                // var options = {"address": "0xf2cc0eeaaaed313542cb262b0b8c3972425143f0"}; // $scope.addressId}; // , "topics": [null]
-                // var options = 'pending'
-                // console.log(options);
-
-                var options = {fromBlock: 0, toBlock: 'latest', address: "0xf2cc0eeaaaed313542cb262b0b8c3972425143f0"};
-
-                var myfilter = web3.eth.filter(options);
-
-                // var myfilter= web3.eth.filter(options);
-                console.log(myfilter);
-
-
-                myfilter.get(function (error, log) {
-                	  console.log("get error:", error);
-                	  console.log("get log:", log);
-                	});
-
-                web3.eth.filter(options,
-                		function(error, result){
-                			if(!error){
-                				console.log("no error");
-                				deferred.resolve(result);
-                				}
-                			else{
-                				console.log("error");
-                				deferred.reject(error);
-                				}
-                			});
-
-                */
                 return deferred.promise;
 
             }
